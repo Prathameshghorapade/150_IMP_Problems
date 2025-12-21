@@ -6,8 +6,8 @@ public class TwoSum {
 
     public static void main(String[] args) {
 
-        int arry[]={1,2,3,4,5,6,9};
-        int target=9;
+        int arry[]={1,2,3,4,5,6,9,5};
+        int target=8;
 
         System.out.println("Index :"+Arrays.toString(twoSum(arry,target)));
 
