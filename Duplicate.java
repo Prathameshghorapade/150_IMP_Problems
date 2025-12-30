@@ -6,7 +6,7 @@ public class Duplicate {
 
     public static void main(String[] args) {
 
-      int arry[]={1,2,3,4};
+      int arry[]={1,2,3};
 
 
         System.out.println(isDuplicate(arry));
@@ -14,21 +14,20 @@ public class Duplicate {
 
     }
 
-    public static boolean isDuplicate(int arry[]){
+    public static boolean isDuplicate(int arry[]) {
 
-        Set<Integer>hashSet=new HashSet<>();
+        Set<Integer> set = new HashSet<>();
 
-        for (int i=0;i< arry.length;i++){
-            if (hashSet.contains(arry[i])){
+
+        for (int i = 0; i < arry.length; i++) {
+            if (set.contains(arry[i])){
                 return true;
-
             }else {
-                hashSet.add(arry[i]);
+                set.add(arry[i]);
             }
         }
 
         return false;
-
     }
 
 }

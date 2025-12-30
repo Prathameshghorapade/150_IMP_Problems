@@ -18,17 +18,16 @@ public class Valid_Anagram {
             return false;
         }
 
-        int count[]=new int[26];
+        int arry[]=new int[26];
 
         for (int i=0;i<s1.length();i++){
 
-            count[s1.charAt(i) - 'a']++;
-            count[s2.charAt(i) - 'a']--;
-
+            arry[s1.charAt(i) - 'a']++;
+            arry[s2.charAt(i) - 'a']--;
         }
 
         for (int i=0;i<26;i++){
-            if (count[i] !=0) {
+            if (arry[i] != 0){
                 return false;
             }
         }
@@ -37,3 +36,4 @@ public class Valid_Anagram {
 
     }
 }
+
