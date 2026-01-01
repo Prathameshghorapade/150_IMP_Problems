@@ -15,7 +15,7 @@ public class MissingElementInArray {
         for (int i = 0; i <nums.length ; i++) {
             sum=sum+nums[i];
         }
-    
+
         int missingNum=totalSum-sum;
 
         System.out.println("Missing Number is :"+missingNum);
