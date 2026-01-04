@@ -1,7 +1,7 @@
 public class MissingElementInArray2 {
     public static void main(String[] args) {
 
-        int number[]={1,2,3,4,6};
+        int []number={1,2,3,4,6};
 
         int missingNumber=0;
 
@@ -13,8 +13,7 @@ public class MissingElementInArray2 {
             missingNumber=missingNumber^i;
         }
 
-        System.out.println("Missing Number :"+missingNumber);
-
+        System.out.println("Missing Element :"+missingNumber);
 
 
     }

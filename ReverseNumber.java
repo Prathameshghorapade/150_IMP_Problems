@@ -3,19 +3,17 @@ public class ReverseNumber {
 
         int number=123;
 
-        int resvserNumber=0;
-
-        int lastDigit;
+       int reverseNumber=0;
 
         while (number!=0){
+            int lastDigit=number%10;
 
-            lastDigit=number%10;
-
-            resvserNumber=resvserNumber*10+lastDigit;
+            reverseNumber=reverseNumber*10+lastDigit;
 
             number=number/10;
         }
-
-        System.out.println(resvserNumber);
+        System.out.println(reverseNumber);
     }
 }
+
+
