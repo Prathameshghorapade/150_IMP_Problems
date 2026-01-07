@@ -4,24 +4,22 @@ public class MoveAllZerosAtEnd {
 
     public static void main(String[] args) {
 
-        int [] numbers={1,0,2,0,3,0,4};
+        int[] numbers = {1, 0, 2, 0, 3, 0, 4};
 
-        int putNonZeros=0;
+        int putAllNonZeros = 0;
 
-        for (int i = 0; i <=numbers.length-1 ; i++) {
-
+        for (int i = 0; i <numbers.length ; i++) {
             if (numbers[i]!=0){
-                int tempt=numbers[putNonZeros];
-                numbers[putNonZeros]=numbers[i];
-                numbers[i]=tempt;
-                putNonZeros++;
+
+                int temp=numbers[putAllNonZeros];
+                numbers[putAllNonZeros]=numbers[i];
+                numbers[i]=temp;
+                putAllNonZeros++;
             }
-
         }
 
-        for (int num:numbers){
-            System.out.println(num);
+        for (int i:numbers){
+            System.out.print(i);
         }
-
     }
 }
