@@ -23,8 +23,7 @@ public class LongestPalindromeCount2 {
 
         if (freqeuncySet.size()>0){
             result=result+1;
+            System.out.println(result);
         }
-        System.out.println(result);
-
     }
 }
