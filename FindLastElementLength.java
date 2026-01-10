@@ -4,12 +4,13 @@ public class FindLastElementLength {
 
         String str="   Hello   java ";
 
-        char [] strArray=str.toCharArray();
+       char[]strArray=str.toCharArray();
 
-        int count =0;
-        for (int i = strArray.length-1; i >0 ; i--) {
+       int count=0;
 
-            if (strArray[i] != ' '){
+        for (int i = strArray.length-1; i>0 ; i--) {
+
+            if (strArray[i]!=' '){
                 count=count+1;
             }else {
                 if (count>0){
@@ -19,7 +20,6 @@ public class FindLastElementLength {
             }
 
         }
-
 
     }
 }

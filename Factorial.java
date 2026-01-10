@@ -6,16 +6,13 @@ public class Factorial {
 
         int number =5;
 
-        int result=1;
+      int result=1;
 
         for (int i = 1; i <=number ; i++) {
-
             result=result*i;
         }
 
-        System.out.println("Factorial of " +number +" is "+result);
-
-
+        System.out.println(result);
 
 
         // if the number is bigger use BIGINTEGER

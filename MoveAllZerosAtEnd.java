@@ -6,10 +6,11 @@ public class MoveAllZerosAtEnd {
 
         int[] numbers = {1, 0, 2, 0, 3, 0, 4};
 
-        int putAllNonZeros = 0;
+        int putAllNonZeros=0;
 
         for (int i = 0; i <numbers.length ; i++) {
-            if (numbers[i]!=0){
+
+            if (numbers[i] !=0){
 
                 int temp=numbers[putAllNonZeros];
                 numbers[putAllNonZeros]=numbers[i];
@@ -18,8 +19,11 @@ public class MoveAllZerosAtEnd {
             }
         }
 
-        for (int i:numbers){
-            System.out.print(i);
-        }
+      for (int i:numbers){
+          System.out.println(i);
+      }
+
+
+
     }
 }

@@ -10,22 +10,22 @@ public class LongestPalindromecount {
 
         Map<Character,Integer>frequencyMap=new HashMap<>();
 
-        int result=0;
-        int oddCount=0;
+      int result=0;
 
-        for (char charater:str.toCharArray()){
+      int oddCount=0;
 
-            frequencyMap.put(charater,frequencyMap.getOrDefault(charater,0)+1);
+      for (char character:str.toCharArray()){
+          frequencyMap.put(character,frequencyMap.getOrDefault(character,0)+1);
+          int currentFrequency=frequencyMap.get(character);
 
-            int currentFrequency=frequencyMap.get(charater);
+          if (currentFrequency%2==0){
+              result=result+2;
+              oddCount--;
+          }else {
+              oddCount++;
+          }
 
-            if (currentFrequency%2==0){
-                result=result+2;
-                oddCount--;
-            }else {
-                oddCount++;
-            }
-        }
+      }
 
         if (oddCount>0){
             result=result+1;
@@ -33,6 +33,7 @@ public class LongestPalindromecount {
         System.out.println(result);
 
 
-
     }
+
 }
+

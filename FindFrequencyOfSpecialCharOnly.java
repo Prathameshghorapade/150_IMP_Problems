@@ -7,23 +7,27 @@ public class FindFrequencyOfSpecialCharOnly {
 
         String str="pr@th@me$h";
 
-        char strArray[]=str.toCharArray();
+        Map<Character,Integer>frequency=new HashMap<>();
 
-        Map<Character,Integer>map=new HashMap<>();
+        for (char character:str.toCharArray()){
 
-        for (char character:strArray){
-            if (!(character >='a' && character<='z') || (character>='A' && character<='Z') || (character>=0 && character<=9) || (character==' ')){
+            if (!(character>='a' && character<='z') || (character>='A'&& character<='Z') || (character>=0&&character<=9) || character==' ') {
 
-                if (map.containsKey(character)){
-                    map.put(character,map.get(character)+1);
+                if (frequency.containsKey(character)){
+                    frequency.put(character,frequency.getOrDefault(character,0)+1);
                 }else {
-                    map.put(character,1);
+                    frequency.put(character,1);
                 }
 
             }
+
         }
 
-        System.out.println(map);
 
+        System.out.println(frequency);
     }
+
+
+
+
 }

@@ -6,22 +6,23 @@ public class Duplicate {
 
     public static void main(String[] args) {
 
-        int arry[] = {1, 2, 3};
+        int arry[] = {1, 2, 3,3};
+
+        boolean isDuplicate=false;
 
         Set<Integer>set=new HashSet<>();
 
-        boolean isContainsDuplicate=false;
 
         for (int i = 0; i <arry.length ; i++) {
-
             if (set.contains(arry[i])){
-                isContainsDuplicate=true;
+                isDuplicate=true;
             }else {
                 set.add(arry[i]);
             }
         }
 
-        System.out.println("Is Array Contais Duplicate Elements :"+isContainsDuplicate);
+        System.out.println(isDuplicate);
+
 
     }
 }

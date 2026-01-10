@@ -6,25 +6,19 @@ public class FindLeaderNumber {
 
         int []numbers={23,10,5,9,3};
 
-        int length=numbers.length; //5
+        int length=numbers.length;
 
-        int maxRight=numbers[length-1]; //2
+        int maxRight=numbers[length-1];
 
         System.out.println(maxRight);
 
-        for (int index=length-2;index>=0;index--){
-            if (numbers[index]>maxRight){
-                maxRight=numbers[index];
-
+        for (int i = length-2; i >=0 ; i--) {
+            if (numbers[i]>maxRight){
+                maxRight=numbers[i];
                 System.out.println(maxRight);
+
             }
-
         }
-
-
-
-
-
 
 
     }

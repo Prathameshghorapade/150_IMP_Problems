@@ -6,21 +6,19 @@ public class CountFrequency {
 
         String str = "madam";
 
-        char [] stringArray=str.toCharArray();
+        Map<Character,Integer>frequency=new HashMap<>();
 
-        Map<Character,Integer>map=new HashMap<>();
-
-        for (char charater:stringArray){
-
-            map.put(charater,map.getOrDefault(charater,0)+1);
+        for (char character:str.toCharArray()){
+            if (frequency.containsKey(character)){
+                frequency.put(character,frequency.getOrDefault(character,0)+1);
+            }else {
+                frequency.put(character,1);
+            }
         }
 
+        System.out.println(frequency);
 
-        for (char charter: map.keySet()){
 
-            System.out.println(charter +" "+map.get(charter));
-
-        }
 
     }
 }

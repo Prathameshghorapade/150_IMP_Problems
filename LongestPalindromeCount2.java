@@ -6,14 +6,15 @@ import java.util.Set;
 public class LongestPalindromeCount2 {
     public static void main(String[] args) {
 
-        String str="aabaa";
+        String str = "aabaa";
 
-        Set<Character>freqeuncySet=new HashSet<>();
+        Set<Character> freqeuncySet = new HashSet<>();
 
         int result=0;
 
         for (char character:str.toCharArray()){
             if (freqeuncySet.contains(character)){
+
                 result=result+2;
                 freqeuncySet.remove(character);
             }else {
@@ -23,7 +24,11 @@ public class LongestPalindromeCount2 {
 
         if (freqeuncySet.size()>0){
             result=result+1;
-            System.out.println(result);
         }
+
+        System.out.println(result);
+
+
+
     }
 }
