@@ -4,18 +4,18 @@ public class ReverseOnlyVowels {
 
         String str="hello";
 
-        char[] strArray=str.toCharArray();
-        int start=0;
-        int end=str.length()-1;
+        char[]strArray=str.toCharArray();
 
         String vowels="aeiouAEIOU";
 
+        int start=0;
+        int end=strArray.length-1;
 
         while (start<end){
 
-            if (vowels.indexOf(strArray[start]) == -1){
+            if (vowels.indexOf(strArray[start]) ==-1){
                 start++;
-            }else if (vowels.indexOf(strArray[end])== -1){
+            }else if (vowels.indexOf(strArray[end])==-1){
                 end--;
             }else {
 
@@ -26,15 +26,12 @@ public class ReverseOnlyVowels {
                 start++;
                 end--;
 
-
-
             }
 
         }
 
-        for(char chracter:strArray){
-            System.out.print(chracter);
-        }
+
+        System.out.println(strArray);
     }
 }
 
