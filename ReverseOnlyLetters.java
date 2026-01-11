@@ -8,28 +8,24 @@ public class ReverseOnlyLetters {
 
        char [] strArray= str.toCharArray();
 
-       int start=0;
+      int start=0;
+      int end=strArray.length-1;
 
-       int end=strArray.length-1;
+      while (start<end){
 
-       while (start<end){
+          if (Character.isLetter(strArray[start]) && Character.isLetter(strArray[end])){
 
-           if (Character.isLetter(strArray[start]) && Character.isLetter(strArray[end])){
+              char temp=strArray[end];
+              strArray[end]=strArray[start];
+              strArray[start]=temp;
 
-               char temp=strArray[end];
-               strArray[end]=strArray[start];
-               strArray[start]=temp;
-           }
+          }
 
-           start++;
-           end--;
-       }
+          start++;
+          end--;
+      }
 
-       for (char character:strArray){
-           System.out.print(character);
-       }
-
-
+        System.out.println(strArray);
 
 
 
