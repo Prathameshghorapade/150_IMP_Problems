@@ -9,32 +9,37 @@ public class BinarySearch {
         searchElement(array,30);
     }
 
-   public static void searchElement(int []array,int target){
+
+
+    static void searchElement(int[]array,int target){
 
         int start=0;
         int end=array.length-1;
 
-
         int ans=-1;
+
         while (start<=end){
             int mid=start+(end-start)/2;
+
             if (array[mid]==target){
                 ans=mid;
                 break;
-            } else if (array[mid]<target) {
+            }
+            if (array[mid]<target){
                 start=mid+1;
-            } else  {
+            }else {
                 end=mid-1;
             }
         }
 
-       if (ans ==-1){
-           System.out.println("Element Not Found");
-       }else {
-           System.out.println("Target Element "+target+" found At Index :"+ans);
-       }
-
+        if (ans==-1){
+            System.out.println("Element is Not Found");
+        }else {
+            System.out.println("Target Element "+target+" Found At Index :"+ans);
+        }
 
 
     }
+
+
 }

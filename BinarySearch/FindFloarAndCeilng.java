@@ -3,10 +3,10 @@ package BinarySearch;
 public class FindFloarAndCeilng {
     public static void main(String[] args) {
 
-        int []array={1,2,3,4,5,6,7,9};
+        int []array={1,2,3,4,5,6,7,9,11};
 
         System.out.println("Floar is :"+findFloar(array,8));
-        System.out.println("Ceiling is "+findCeiling(array,8));
+  System.out.println("Ceiling is "+findCeiling(array,8));
 
     }
 
@@ -56,6 +56,8 @@ public class FindFloarAndCeilng {
 
 
     }
+
+
 
 
 

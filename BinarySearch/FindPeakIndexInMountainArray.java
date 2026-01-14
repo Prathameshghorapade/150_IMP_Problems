@@ -13,24 +13,24 @@ public class FindPeakIndexInMountainArray {
     }
 
 
-    static int peekIndex(int[]array){
+   static int peekIndex(int[]array) {
 
-        int start=0;
-        int end=array.length-1;
+       int start = 0;
+       int end = array.length - 1;
 
-        while (start<end){
+       while (start < end) {
 
-            int mid=start+(end-start)/2;
+           int mid = start + (end - start) / 2;
+           if (array[mid] < array[mid + 1]) {
+               start = mid + 1;
+           } else {
+               end = mid;
+           }
+       }
 
-            if (array[mid]<array[mid+1]){
-                start=mid+1;
-            }else {
-                end=mid;
-            }
-        }
+       return start;
+   }
 
-        return start;
 
-    }
 
 }

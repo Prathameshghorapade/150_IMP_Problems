@@ -20,36 +20,33 @@ public class ValidMountainArray {
     static boolean isMountainArray(int[]array){
 
         int index=0;
-
         int end=array.length-1;
 
         if (array.length<3){
-            return false;
+        return false;
         }
 
-        while (index<end) {
+       while (index<end){
+           if (array[index]<array[index+1]){
+               index++;
+           }else {
+               break;
+           }
+       }
 
-            if (array[index] < array[index + 1]) {
-                index++;
-            } else {
-                break;
-            }
-        }
+       if (index==0 || index==end){
+           return false;
+       }
 
-        if (index==0 || index==end){
-            return false;
-        }
+      while (index<end){
+          if (array[index]>array[index+1]) {
+              index++;
+          }else {
+              break;
+          }
+      }
 
-        while (index<end){
-            if (array[index]>array[index+1]){
-                index++;
-            }else {
-                break;
-            }
-        }
-
-        return (index==end);
-
-
+      return (index==end);
     }
+
 }
