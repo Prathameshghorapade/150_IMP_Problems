@@ -13,30 +13,29 @@ public class FindMAximumSumSubArray {
 
     }
 
-    public static void findMax(int array [][]){
-
-        int max=Integer.MIN_VALUE;
+    static void findMax(int[][]array){
 
         int index=0;
 
+        int max=Integer.MIN_VALUE;
+
         for (int i = 0; i <array.length ; i++) {
             int sum=0;
-
             for (int j = 0; j <array[i].length ; j++) {
-
-                sum = sum + array[i][j];
-            }
-
+                sum=sum+array[i][j];
                 if (sum>max){
                     max=sum;
                     index=i;
                 }
 
-
+            }
         }
-        System.out.println("MAximum Sum of Array is :"+max +" for index :"+index);
 
+        System.out.println("the Maximum Sum "+max + " of subArray  of Index "+index);
 
 
     }
+
+
+
 }

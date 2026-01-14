@@ -9,14 +9,14 @@ public class SearchEleInW2DArray {
                 {3,4,2,5,7,9}
         };
 
-        findEle(array2D,4,false);
+        findEle(array2D,3,false);
 
         findEle(array2D,3,true);
 
 
     }
 
-    public static void findEle(int array[][],int target,boolean lastOccurance){
+    public static void findEle(int array[][],int target,boolean firstOccurance){
         int outerLoop=0;
         int innerLoop=0;
 
@@ -28,7 +28,7 @@ public class SearchEleInW2DArray {
                     innerLoop=j;
                 }
             }
-            if (lastOccurance==false){
+            if (firstOccurance==false){
                 found=true;
                 break;
             }

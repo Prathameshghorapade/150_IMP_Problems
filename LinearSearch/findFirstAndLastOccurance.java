@@ -11,24 +11,30 @@ public class findFirstAndLastOccurance {
 
     }
 
-    public static void findelemnt(int []array,int target,boolean lastOccurance){
+   static void findelemnt(int[]arry,int target,boolean isLastOccurance){
 
         int ans=0;
-        for (int i = 0; i <array.length ; i++) {
-            if (array[i]==target){
-                ans=i;
-                if (lastOccurance==false){
-                    break;
-                }
-            }
-        }
-        if (lastOccurance==true){
-            System.out.println("Last Occurance Index of target Element is :"+ans);
-        }else {
-            System.out.println("First Occurance Index of target Element is :"+ans);
-        }
+       for (int i = 0; i <arry.length ; i++) {
+           if (arry[i]==target){
+               ans=i;
+
+               if (isLastOccurance==false){
+                   break;
+               }
+           }
+       }
+
+       if (isLastOccurance){
+           System.out.println("Last Occurance of Element "+target+" Index is " + ans);
+       }else {
+           System.out.println("First Occurance of Element "+target+" Index is " + ans);
+
+       }
+
+
+   }
 
 
 
-    }
+
 }

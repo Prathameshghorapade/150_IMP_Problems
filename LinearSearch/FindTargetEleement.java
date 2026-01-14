@@ -9,18 +9,25 @@ public class FindTargetEleement {
 
     }
 
-    public static void findTarget(int arry[],int target){
+
+    public static void findTarget(int[]array,int target){
+
         int ans=-1;
-        for (int i = 0; i <arry.length ; i++) {
-            if (arry[i]==target){
+
+        for (int i = 0; i <array.length ; i++) {
+
+            if (array[i]==target){
                 ans=i;
                 break;
             }
         }
+
         if (ans==-1){
-            System.out.println("element Not Found");
+            System.out.println("Element NoT Found");
         }else {
-            System.out.println("Element Found at Index :"+ans);
+            System.out.println("Element Found At Index :"+ans);
         }
+
     }
+
 }

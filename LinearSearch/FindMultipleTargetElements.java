@@ -7,22 +7,27 @@ public class FindMultipleTargetElements {
         findMultiple(array,2);
     }
 
-    public static void findMultiple(int array[],int taget){
+
+    static void findMultiple(int[]array,int target){
 
         int ans[]=new int[array.length];
+
         int counter=0;
+
         for (int i = 0; i <array.length ; i++) {
-            if (array[i]==taget){
+
+            if (array[i]==target){
                 ans[counter]=i;
                 counter++;
             }
         }
+
         if (counter==0){
-            System.out.println("Elemet is Not Found At Any Index");
+            System.out.println("Element Not Found");
         }
 
         for (int i = 0; i <counter ; i++) {
-            System.out.println("Element found at these Indexses:"+ans[i]);
+            System.out.println("Element found at Indexes :"+ans[i]);
         }
 
     }
