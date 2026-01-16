@@ -11,7 +11,7 @@ public class BinarySearch {
 
 
 
-    static void searchElement(int[]array,int target){
+    static void searchElement(int[]array,int target) {
 
         int start=0;
         int end=array.length-1;
@@ -19,27 +19,27 @@ public class BinarySearch {
         int ans=-1;
 
         while (start<=end){
+
             int mid=start+(end-start)/2;
 
-            if (array[mid]==target){
+            if (array[mid] ==target){
                 ans=mid;
                 break;
             }
+
             if (array[mid]<target){
                 start=mid+1;
             }else {
                 end=mid-1;
             }
+
         }
 
         if (ans==-1){
-            System.out.println("Element is Not Found");
+            System.out.println("Element Not Found");
         }else {
-            System.out.println("Target Element "+target+" Found At Index :"+ans);
+            System.out.println("Element"+target +" Found At Index :"+ans);
         }
-
-
     }
-
 
 }
