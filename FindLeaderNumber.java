@@ -4,22 +4,17 @@
 public class FindLeaderNumber {
     public static void main(String[] args) {
 
-        int []numbers={23,10,5,9,3};
+        int []numbers={23,10,5,40,3,25};
 
-        int length=numbers.length;
+       int maxRight=numbers.length-1;
 
-        int maxRight=numbers[length-1];
+        for (int i = 0; i <numbers.length ; i++) {
 
-        System.out.println(maxRight);
-
-        for (int i = length-2; i >=0 ; i--) {
             if (numbers[i]>maxRight){
                 maxRight=numbers[i];
-                System.out.println(maxRight);
-
             }
         }
 
-
+        System.out.println(maxRight);
     }
 }

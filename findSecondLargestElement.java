@@ -4,24 +4,29 @@ public class findSecondLargestElement {
 
         int numbers[] = {1, 5, 3, 2, 6, 7, 8, 20,34};
 
-        int largest=Integer.MIN_VALUE;
-        int secondLargest=Integer.MIN_VALUE;
+      int largestElement=Integer.MIN_VALUE;
+      int secondLargestElement=Integer.MIN_VALUE;
 
-        for (int num:numbers){
 
-            if (num>largest){
-                secondLargest=largest;
-                largest=num;
-            }
+      for (int number:numbers){
 
-            if (num<largest && num>secondLargest){
-                secondLargest=num;
-            }
+          if (number>largestElement){
 
-        }
+              secondLargestElement=largestElement;
+              largestElement=number;
+          }
 
-        System.out.println("largest :"+largest);
-        System.out.println("secondLargest :"+secondLargest);
+          if (number<largestElement && number>secondLargestElement){
+
+              secondLargestElement=number;
+          }
+      }
+
+        System.out.println("Largest Element :"+largestElement);
+        System.out.println("Second Largest Element :"+secondLargestElement);
+
+
+
     }
 }
 
