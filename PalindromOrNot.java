@@ -1,22 +1,28 @@
 public class PalindromOrNot {
     public static void main(String[] args) {
 
+
+
         String str="madam";
 
-        int start=0;
+       char[] strArray=str.toCharArray();
 
-        int end=str.length()-1;
+       int start=0;
+       int end=strArray.length-1;
 
-        boolean isPalindrome=true;
+       boolean isPalindrome=true;
 
-        for (int i = 0; i <str.length() ; i++) {
+        for (int i = 0; i < strArray.length ;i++) {
 
-            if (str.charAt(start) != str.charAt(end)){
+            if (strArray[start] !=strArray[end]){
                 isPalindrome=false;
             }
 
             start++;
             end--;
+
+
+
         }
 
         System.out.println(isPalindrome);
