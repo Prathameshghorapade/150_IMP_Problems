@@ -14,24 +14,21 @@ public class OneArrayIsSubSetOFAnother {
 
     static boolean isSubset(int arr1[],int arr2[]){
 
-        Map<Integer,Integer>frequencyMap=new HashMap<>();
+       Map<Integer,Integer>frequencyMap=new HashMap<>();
 
-        for (int element:arr1){
+       for (int element:arr1){
+           frequencyMap.put(element,frequencyMap.getOrDefault(element,0)+1);
+       }
 
-            frequencyMap.put(element,frequencyMap.getOrDefault(element,0)+1);
+       for (int element:arr2){
 
-        }
+           if (frequencyMap.containsKey(element) && frequencyMap.get(element)>0){
+               frequencyMap.put(element,frequencyMap.getOrDefault(element,0)-1);
+           }else {
+               return false;
+           }
+       }
 
-        for (int element:arr2){
-
-            if (frequencyMap.containsKey(element) && frequencyMap.get(element)>0){
-                frequencyMap.put(element,frequencyMap.getOrDefault(element,0)-1);
-            }else {
-                return false;
-            }
-        }
-
-        return true;
-
+       return true;
     }
 }
